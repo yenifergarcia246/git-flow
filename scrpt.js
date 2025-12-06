@@ -43,7 +43,8 @@ form.addEventListener("submit", (e) => {
 });
 
 function validateEmail(email) {
-    return email.includes("@") && email.includes(".");
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
 }
 
 function shakeForm(msg) {
